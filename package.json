@@ -1,0 +1,21 @@
+{
+  "name": "server_api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "m3u8-parser": "^7.1.0",
+    "moment": "^2.30.1",
+    "node-cache": "^5.1.2",
+    "stream": "^0.0.3"
+  }
+}
