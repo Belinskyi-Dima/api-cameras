@@ -22,4 +22,11 @@ async function fetchData(url) {
         throw err;  // Перенаправляємо помилку на вищий рівень
     }
 }
-module.exports = {getIllinoisData, fetchData};
+function getIllinoisFromIllinoisDbJson (id, db) {
+    const resultFindCamera = db.features.find(item => item.properties?.OBJECTID == id);
+    if (resultFindCamera) {
+        // console.log(resultFindCamera?.attributes?.SnapShot);
+        return resultFindCamera?.properties?.SnapShot;
+    } 
+}
+module.exports = {getIllinoisData, fetchData, getIllinoisFromIllinoisDbJson};

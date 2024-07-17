@@ -12,7 +12,8 @@ const fs = require('fs/promises');
 const getMontanaData = require("./getMontanaData");
 const getTexasData = require("./getTexasData");
 const getStrimArkansasToken = require("./getStrimArkansasToken");
-const {getIllinoisData, fetchData} = require("./getIllinoisData")
+const {getIllinoisData, fetchData, getIllinoisFromIllinoisDbJson} = require("./getIllinoisData");
+const illinosi_db = require("./getIllinoisData/illinosi_db.json")
 
 
 
@@ -308,41 +309,53 @@ if (false) {
 //  ============= illinois ===========================
   app.get("/illinois", async (req, res) => {
     
-    const url = 'https://services2.arcgis.com/aIrBD8yn1TDTEXoz/arcgis/rest/services/TrafficCamerasTM_Public/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json';
+    // const url = 'https://services2.arcgis.com/aIrBD8yn1TDTEXoz/arcgis/rest/services/TrafficCamerasTM_Public/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json';
     
     const { id } = req.query;
-    // console.log("Received ID:", id);
+    // // console.log("Received ID:", id);
     if (!id) {
         return res.status(400).send('Параметри "param" та "id" є обов’язковими');
       }
-      try {
-      const cacheKey = `il`;
-      const cachedResult = cache.get(cacheKey);
-      if (cachedResult) {
-        // console.log("повертаю з кешу Illinois");
-        const resultGetIllinois = await getIllinoisData(id, cachedResult);
-        if (resultGetIllinois) {
-            res.redirect(resultGetIllinois)
-        } else {
-            res.status(404).send('Дані з таким ID не знайдені');
-        }
+    //   try {
+    //   const cacheKey = `il`;
+    //   const cachedResult = cache.get(cacheKey);
+    //   if (cachedResult) {
+    //     // console.log("повертаю з кешу Illinois");
+    //     const resultGetIllinois = await getIllinoisData(id, cachedResult);
+    //     if (resultGetIllinois) {
+    //         res.redirect(resultGetIllinois)
+    //     } else {
+    //         res.status(404).send('Дані з таким ID не знайдені');
+    //     }
 
-      } else {
-        // console.log(" новий запит Illinois");
-        const resultFetch = await fetchData(url);
-        cache.set(cacheKey, resultFetch, 86400);
-        const resultGetIllinois = await getIllinoisData(id, resultFetch);
+    //   } else {
+    //     // console.log(" новий запит Illinois");
+    //     const resultFetch = await fetchData(url);
+    //     cache.set(cacheKey, resultFetch, 86400);
+    //     const resultGetIllinois = await getIllinoisData(id, resultFetch);
+    //     if (resultGetIllinois) {
+    //         res.redirect(resultGetIllinois)
+    //     } else {
+    //         res.status(404).send('Дані з таким ID не знайдені');
+    //     }
+    //   }
+    // } catch (error) {
+    //         console.error("Error fetching Illinois data:", error);
+    //         return res.status(500).send('Сталася внутрішня помилка сервера');
+    //     }
+    //   ============
+    try {
+              const resultGetIllinois = await getIllinoisFromIllinoisDbJson(id, illinosi_db);
         if (resultGetIllinois) {
             res.redirect(resultGetIllinois)
         } else {
             res.status(404).send('Дані з таким ID не знайдені');
         }
-      }
+        
     } catch (error) {
-            console.error("Error fetching Illinois data:", error);
-            return res.status(500).send('Сталася внутрішня помилка сервера');
-        }
-      
+        console.error("Error fetching Illinois data:", error);
+        //         return res.status(500).send('Сталася внутрішня помилка сервера');
+    }
     })
    
 
