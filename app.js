@@ -12,19 +12,11 @@ const fs = require('fs/promises');
 const getMontanaData = require("./getMontanaData");
 const getTexasData = require("./getTexasData");
 const getStrimArkansasToken = require("./getStrimArkansasToken");
+const {getIllinoisData, fetchData} = require("./getIllinoisData")
 
 
 
-// const corsOptions = {
-// //   origin: 'http://localhost:5001', 
-// // origin: ['https://admin-panel.truckerguideapp.com/', 'https://truckerguideapp.com/'],
-// origin: true,
-// methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-// // methods: 'GET',
-// preflightContinue: false,
-// optionsSuccessStatus: 204,
-// // allowedHeaders: ['Content-Type', 'Authorization']
-// };
+
 const corsOptions = {
     origin: '*', // Дозволяємо доступ з будь-якого джерела
     // origin: ['https://admin-panel.truckerguideapp.com/', 'https://truckerguideapp.com/'],
@@ -49,15 +41,15 @@ const corsOptions = {
 // app.use(limiter);
 
 // const cache = new NodeCache({ stdTTL: 300 });
-const cache = new NodeCache({ stdTTL: 300, checkperiod: 120 });
+const cache = new NodeCache({ stdTTL: 600, checkperiod: 120 });
 // ===== Middleware - save   in server log======
 app.use(express.json());
 
 app.use(async(req, res, next)=> {
-    console.log("req.method=====>", req.method);
+    // console.log("req.method=====>", req.method);
     const origin = req.get('Origin')|| req.get('Referer') || 'unknown-origin';
     const ip = req.ip;
-    console.log(`Запит надійшов з домену: ==> ${origin}`);
+    // console.log(`Запит надійшов з домену: ==> ${origin}`);
     const {method, originalUrl,url} = req;
     const date = moment().format('DD-MM-YYYY_hh:mm:ss');
     const logEntry = `\n${method}/${origin}/ ${originalUrl} /ip: ${ip} /${date}`;
@@ -309,16 +301,50 @@ if (false) {
     // }
     // +++++++++++++++++
     } catch (error) {
-        console.error('Error retrieving stream URL:', error);
+        // console.error('Error retrieving stream URL:', error);
         res.status(500).send('Error retrieving stream URL');
     }
   })
-//   const sslOptions = {
-//     key: fs.readFileSync('server.key'),
-//     cert: fs.readFileSync('server.crt')
-// };
-app.listen(3000)
-// const PORT = process.env.PORT || 3000;
-// https.createServer(sslOptions, app).listen(PORT, () => {
-//     console.log(`HTTPS server is running on port ${PORT}`);
-// });
+//  ============= illinois ===========================
+  app.get("/illinois", async (req, res) => {
+    
+    const url = 'https://services2.arcgis.com/aIrBD8yn1TDTEXoz/arcgis/rest/services/TrafficCamerasTM_Public/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json';
+    
+    const { id } = req.query;
+    // console.log("Received ID:", id);
+    if (!id) {
+        return res.status(400).send('Параметри "param" та "id" є обов’язковими');
+      }
+      try {
+      const cacheKey = `il`;
+      const cachedResult = cache.get(cacheKey);
+      if (cachedResult) {
+        // console.log("повертаю з кешу Illinois");
+        const resultGetIllinois = await getIllinoisData(id, cachedResult);
+        if (resultGetIllinois) {
+            res.redirect(resultGetIllinois)
+        } else {
+            res.status(404).send('Дані з таким ID не знайдені');
+        }
+
+      } else {
+        // console.log(" новий запит Illinois");
+        const resultFetch = await fetchData(url);
+        cache.set(cacheKey, resultFetch, 86400);
+        const resultGetIllinois = await getIllinoisData(id, resultFetch);
+        if (resultGetIllinois) {
+            res.redirect(resultGetIllinois)
+        } else {
+            res.status(404).send('Дані з таким ID не знайдені');
+        }
+      }
+    } catch (error) {
+            console.error("Error fetching Illinois data:", error);
+            return res.status(500).send('Сталася внутрішня помилка сервера');
+        }
+      
+    })
+   
+
+    
+    app.listen(3000)
