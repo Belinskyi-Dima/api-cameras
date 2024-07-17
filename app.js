@@ -350,25 +350,40 @@ app.use((req, res, next) => {
     //     }
     //   ============
     try {
-              const resultGetIllinois = await getIllinoisFromIllinoisDbJson(id, illinosi_db);
-              console.log(resultGetIllinois);
-        if (resultGetIllinois) {
-            const imageResponse = await fetch(resultGetIllinois);
-            if (imageResponse.ok) {
-                // Якщо зображення успішно завантажено, повернути його клієнту
-                const imageBuffer = Buffer.from(await imageResponse.arrayBuffer());
 
-                // Відправляємо зображення клієнту
-                res.set('Content-Type', 'image/jpeg'); // Встановлюємо тип відповіді на зображення
-                res.send(imageBuffer);;
-            } else {
-                // Якщо виникла помилка при завантаженні зображення, повернути відповідний статус помилки
-                res.status(imageResponse.status).send(`Помилка завантаження зображення: ${imageResponse.statusText}`);
-            }
-            // res.redirect(resultGetIllinois)
+        const cacheKey = `illinois_${id}`;
+        const cachedData = cache.get(cacheKey);
+        if (cachedData) {
+            console.log('Знайдено дані в кеші для ID:', id);
+            // Використовуємо дані з кешу
+            res.set('Content-Type', 'image/jpeg'); // Встановлюємо тип відповіді на зображення
+            res.send(cachedData);
         } else {
-            res.status(404).send('Дані з таким ID не знайдені');
+
+            const resultGetIllinois = await getIllinoisFromIllinoisDbJson(id, illinosi_db);
+            console.log(resultGetIllinois);
+      if (resultGetIllinois) {
+          const imageResponse = await fetch(resultGetIllinois);
+
+          if (imageResponse.ok) {
+              // Якщо зображення успішно завантажено, повернути його клієнту
+              const imageBuffer = Buffer.from(await imageResponse.arrayBuffer());
+              cache.set(cacheKey, imageBuffer);
+              // Відправляємо зображення клієнту
+              res.set('Content-Type', 'image/jpeg'); // Встановлюємо тип відповіді на зображення
+              res.send(imageBuffer);;
+          } else {
+              // Якщо виникла помилка при завантаженні зображення, повернути відповідний статус помилки
+              res.status(imageResponse.status).send(`Помилка завантаження зображення: ${imageResponse.statusText}`);
+          }
+          // res.redirect(resultGetIllinois)
+      } else {
+          res.status(404).send('Дані з таким ID не знайдені');
+      }
+
         }
+
+      
         
     } catch (error) {
         console.error("Error fetching Illinois data:", error);
