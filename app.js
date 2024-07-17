@@ -307,15 +307,20 @@ if (false) {
     }
   })
 //  ============= illinois ===========================
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); // Дозволяємо доступ з будь-якого джерела
+    res.header('Access-Control-Allow-Methods', 'GET'); // Дозволяємо тільки GET запити
+    next();
+});
   app.get("/illinois", async (req, res) => {
     
-    // const url = 'https://services2.arcgis.com/aIrBD8yn1TDTEXoz/arcgis/rest/services/TrafficCamerasTM_Public/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json';
     
     const { id } = req.query;
     // // console.log("Received ID:", id);
     if (!id) {
         return res.status(400).send('Параметри "param" та "id" є обов’язковими');
       }
+    // const url = 'https://services2.arcgis.com/aIrBD8yn1TDTEXoz/arcgis/rest/services/TrafficCamerasTM_Public/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json';
     //   try {
     //   const cacheKey = `il`;
     //   const cachedResult = cache.get(cacheKey);
@@ -346,8 +351,21 @@ if (false) {
     //   ============
     try {
               const resultGetIllinois = await getIllinoisFromIllinoisDbJson(id, illinosi_db);
+              console.log(resultGetIllinois);
         if (resultGetIllinois) {
-            res.redirect(resultGetIllinois)
+            const imageResponse = await fetch(resultGetIllinois);
+            if (imageResponse.ok) {
+                // Якщо зображення успішно завантажено, повернути його клієнту
+                const imageBuffer = Buffer.from(await imageResponse.arrayBuffer());
+
+                // Відправляємо зображення клієнту
+                res.set('Content-Type', 'image/jpeg'); // Встановлюємо тип відповіді на зображення
+                res.send(imageBuffer);;
+            } else {
+                // Якщо виникла помилка при завантаженні зображення, повернути відповідний статус помилки
+                res.status(imageResponse.status).send(`Помилка завантаження зображення: ${imageResponse.statusText}`);
+            }
+            // res.redirect(resultGetIllinois)
         } else {
             res.status(404).send('Дані з таким ID не знайдені');
         }
