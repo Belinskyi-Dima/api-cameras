@@ -13,7 +13,9 @@ const getMontanaData = require("./getMontanaData");
 const getTexasData = require("./getTexasData");
 const getStrimArkansasToken = require("./getStrimArkansasToken");
 const {getIllinoisData, fetchData, getIllinoisFromIllinoisDbJson} = require("./getIllinoisData");
-const illinosi_db = require("./getIllinoisData/illinosi_db.json")
+const illinosi_db = require("./getIllinoisData/illinosi_db.json");
+const getMassachusetts = require("./getMassachusetts");
+const getMassachusettsImg = require("./getMassachusettsImg");
 
 
 
@@ -368,7 +370,7 @@ app.use((req, res, next) => {
           if (imageResponse.ok) {
               // Якщо зображення успішно завантажено, повернути його клієнту
               const imageBuffer = Buffer.from(await imageResponse.arrayBuffer());
-              cache.set(cacheKey, imageBuffer);
+              cache.set(cacheKey, imageBuffer, 60);
               // Відправляємо зображення клієнту
               res.set('Content-Type', 'image/jpeg'); // Встановлюємо тип відповіді на зображення
               res.send(imageBuffer);;
@@ -390,7 +392,57 @@ app.use((req, res, next) => {
         //         return res.status(500).send('Сталася внутрішня помилка сервера');
     }
     })
-   
-
+    // ======================== massachusetts ===========================
+    // app.get("/massachusetts", async (req, res) => {
     
+    //     const { id } = req.query;
+    //     console.log("Received ID:", id);
+    //     if (!id) {
+    //         return res.status(400).send('Параметри "param" та "id" є обов’язковими');
+    //       }
+    //       const resultgetMassachusetts = await getMassachusetts(id);
+    //       console.log("response result ",resultgetMassachusetts);
+    //       if (resultgetMassachusetts) {
+    //         res.set('Content-Type', 'application/vnd.apple.mpegurl');
+    //         res.status(200).send(resultgetMassachusetts);
+    //       }else {
+    //         res.status(404).send('Дані з таким ID не знайдені');
+    //     }
+    //     })
+    // ==== mass img
+     app.get("/massachusetts", async (req, res) => {
+    
+    
+        const { id } = req.query;
+        console.log("Received ID:", id);
+        if (!id) {
+            return res.status(400).send('Параметри "param" та "id" є обов’язковими');
+          }
+          const cacheKey = `mass${id}`;
+        const cachedData = cache.get(cacheKey);
+        if (cachedData) {
+            console.log('Знайдено дані в кеші для ID:', id);
+            // Використовуємо дані з кешу
+            res.set('Content-Type', 'image/jpeg'); // Встановлюємо тип відповіді на зображення
+            res.send(cachedData);
+        } else {
+            const resultGetIllinois = await getMassachusettsImg(id);
+            console.log(resultGetIllinois);
+            if (resultGetIllinois) {
+              const imageResponse = await fetch(resultGetIllinois);
+    
+              if (imageResponse.ok) {
+                  const imageBuffer = Buffer.from(await imageResponse.arrayBuffer());
+                  cache.set(cacheKey, imageBuffer, 300);
+                  // Відправляємо зображення клієнту
+                  res.set('Content-Type', 'image/jpeg'); // Встановлюємо тип відповіді на зображення
+                  res.send(imageBuffer);
+              }
+          }
+        }
+    
+        })
+
+    // http://localhost:3000/arkansas?id=314
+    // https://api-cameras.onrender.com/illinois?id=1639
     app.listen(3000)
