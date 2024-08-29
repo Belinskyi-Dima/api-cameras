@@ -1,32 +1,4 @@
-// getMassachusettsImg
-async function getMassachusettsImg(id) {
-    try {
-        const resultFetchData = await fetchData();
-        
-        if (resultFetchData && resultFetchData.length > 0) {
-            const data = resultFetchData[0].data.listCameraViewsQuery.cameraViews;
-            const resultFind = data.find(item => 
-                item.parentCollection.uri === id && 
-                Array.isArray(item.sources) && 
-                item.sources.length > 0 && 
-                item.sources[0].src !== null
-            );
-            if (resultFind && resultFind.url) {
-                return resultFind.url;
-                // console.log(resultFind.sources[0].src);
-                // const response = await getMassachusettsChunklist(resultFind.sources[0].src, id);
-                // return response;  // Повертаємо значення response
-            } 
-            
-            return null;
-        }
-        return null;
-    } catch (error) {
-        console.error("Помилка при отриманні даних:", error);
-        return null;
-    }
-}
-async function fetchData() {
+async function fetchDataMass() {
     const url = 'https://mass511.com/api/graphql';
 
     const queries = [
@@ -68,5 +40,5 @@ async function fetchData() {
         console.error("Помилка:", error);
         return null;
     }
-} 
-module.exports = getMassachusettsImg;
+}
+module.exports = fetchDataMass;
