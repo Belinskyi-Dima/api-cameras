@@ -14,7 +14,13 @@ async function getTexasData(state, id) {
             //   const icd_Id = it.name;
               const resultNormalaseName = await normaliseName(icd_Id);
               const resultUrlImg = await getImgUrl(resultNormalaseName, state).then(data => data);
-              return resultUrlImg['snippet'];
+              try {
+                return resultUrlImg['snippet'];
+              } catch (error) {
+                console.log("no snippet ", error.message);
+                
+              }
+              
             }
           }
         }

@@ -93,7 +93,7 @@ async function fetchToken2(url, body) {
         console.error('Fetch error:', error);
     }
 }
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 async function fetchToken3(token, stream) {
     // const headers = {
     //     // ":authority": "pa-se3.arcadis-ivds.com:8200",
@@ -157,3 +157,4 @@ async function fetchToken3(token, stream) {
     
 }
 module.exports = getStrimPannsylvania;
+// https://api-cameras.onrender.com/pennsylvania?id=3942--10&stream=https://pa-se3.arcadis-ivds.com:8200/chan-3942/index.m3u8
