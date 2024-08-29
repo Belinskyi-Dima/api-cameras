@@ -2,13 +2,13 @@ async function getStrimPannsylvania(cameraId, stream) {
     const url = `https://www.511pa.com/Camera/GetVideoUrl?cameraId=${cameraId}`;
 
     const resToken1 = await fetchToken1(url);
-    // console.log(resToken1);
+    // console.log("tok 1 :",resToken1);
     const urlPost = `https://pa.arcadis-ivds.com/api/SecureTokenUri/GetSecureTokenUriBySourceId`;
     const resToken2 = await fetchToken2(urlPost, resToken1);
-    // console.log(resToken2);
+    // console.log("tok 2 :",resToken2);
     const validatorStream = stream.replace("index", "stream")
     const resToken3 = await fetchToken3(resToken2, validatorStream);
-    console.log(resToken3);
+    // console.log("tok 3 :",resToken3);
     
         return resToken3;
 }
@@ -93,7 +93,7 @@ async function fetchToken2(url, body) {
         console.error('Fetch error:', error);
     }
 }
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 async function fetchToken3(token, stream) {
     // const headers = {
     //     // ":authority": "pa-se3.arcadis-ivds.com:8200",
@@ -134,7 +134,7 @@ async function fetchToken3(token, stream) {
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
     };
     const newStream = `${stream}${token}`
-    console.log("newStream ==> ", newStream);
+    console.log("newStream  Pannsylvania ==> ", newStream);
     
     try {
         const response = await fetch(newStream, {
