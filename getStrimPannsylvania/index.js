@@ -8,7 +8,7 @@ async function getStrimPannsylvania(cameraId, stream) {
     // console.log(resToken2);
     const validatorStream = stream.replace("index", "stream")
     const resToken3 = await fetchToken3(resToken2, validatorStream);
-    // console.log(resToken3);
+    console.log(resToken3);
     
         return resToken3;
 }
