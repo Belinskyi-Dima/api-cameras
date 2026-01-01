@@ -2,13 +2,13 @@ async function getStrimPannsylvania(cameraId, stream) {
     const url = `https://www.511pa.com/Camera/GetVideoUrl?cameraId=${cameraId}`;
 
     const resToken1 = await fetchToken1(url);
-    // console.log("tok 1 :",resToken1);
+    console.log("tok 1 :",resToken1);
     const urlPost = `https://pa.arcadis-ivds.com/api/SecureTokenUri/GetSecureTokenUriBySourceId`;
     const resToken2 = await fetchToken2(urlPost, resToken1);
-    // console.log("tok 2 :",resToken2);
+    console.log("tok 2 :",resToken2);
     const validatorStream = stream.replace("index", "stream")
     const resToken3 = await fetchToken3(resToken2, validatorStream);
-    // console.log("tok 3 :",resToken3);
+    console.log("tok 3 :",resToken3);
     
         return resToken3;
 }
@@ -95,36 +95,18 @@ async function fetchToken2(url, body) {
 }
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 async function fetchToken3(token, stream) {
-    // const headers = {
-    //     // ":authority": "pa-se3.arcadis-ivds.com:8200",
-    //     // ":method": "GET",
-    //     // ":path": "/chan-3942/stream.m3u8?token=a2ca8359d1ef2586f908fe662ac98a7ae7aa9c45b0cd302c4c5e0349673a2bdb",
-    //     // ":scheme": "https",
-    //     "accept": "*/*",
-    //     "accept-encoding": "gzip, deflate, br, zstd",
-    //     "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6",
-    //     // "origin": "https://www.511pa.com",
-    //     "priority": "u=1, i",
-    //     "referer": "https://www.511pa.com/",
-    //     "sec-ch-ua": "\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Google Chrome\";v=\"128\"",
-    //     "sec-ch-ua-mobile": "?0",
-    //     "sec-ch-ua-platform": "\"Windows\"",
-    //     "sec-fetch-dest": "empty",
-    //     "sec-fetch-mode": "cors",
-    //     "sec-fetch-site": "cross-site",
-    //     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-    // };
+    
     const headers = {
-        // ":authority": "pa-se3.arcadis-ivds.com:8200",
+        // ":authority": "pa-se1.arcadis-ivds.com:8200",
         // ":method": "GET",
-        // ":path": "/chan-3942/index.m3u8?token=a2ca8359d1ef2586f908fe662ac98a7ae7aa9c45b0cd302c4c5e0349673a2bdb",
+        // ":path": "/chan-4021/stream.m3u8?token=6aa1ca9febddcd8566dfb8e515c14fa20b8e8feb091113c2297fdf10311b4387",
         // ":scheme": "https",
         "accept": "*/*",
         "accept-encoding": "gzip, deflate, br, zstd",
         "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6",
-        "origin": "https://www.511pa.com",
+        // "origin": "https://www.511pa.com",
         "priority": "u=1, i",
-        "referer": "https://www.511pa.com/",
+        "referer": "https://www.511pa.com/cctv?start=100&length=50&order%5Bi%5D=1&order%5Bdir%5D=asc",
         "sec-ch-ua": "\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Google Chrome\";v=\"128\"",
         "sec-ch-ua-mobile": "?0",
         "sec-ch-ua-platform": "\"Windows\"",
@@ -132,16 +114,30 @@ async function fetchToken3(token, stream) {
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "cross-site",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+        // "accept": "*/*",
+        // "accept-encoding": "gzip, deflate, br, zstd",
+        // "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6",
+        // // "origin": "https://www.511pa.com",
+        // "priority": "u=1, i",
+        // // "referer": "https://www.511pa.com/",
+        // "sec-ch-ua": "\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Google Chrome\";v=\"128\"",
+        // "sec-ch-ua-mobile": "?0",
+        // "sec-ch-ua-platform": "\"Windows\"",
+        // "sec-fetch-dest": "empty",
+        // "sec-fetch-mode": "cors",
+        // "sec-fetch-site": "cross-site",
+        // "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
     };
     const newStream = `${stream}${token}`
     console.log("newStream  Pannsylvania ==> ", newStream);
     
     try {
-        const response = await fetch(newStream, {
+        const response = await fetch(stream, {
             method: "GET",
             headers: headers,
             // body: JSON.stringify(body)
         });
+        console.log(response);
         
         if (response.ok) {
             // const data = await response.json();
@@ -157,4 +153,5 @@ async function fetchToken3(token, stream) {
     
 }
 module.exports = getStrimPannsylvania;
-// https://api-cameras.onrender.com/pennsylvania?id=3942--10&stream=https://pa-se3.arcadis-ivds.com:8200/chan-3942/index.m3u8
+// https://api-cameras.onrender.com/pennsylvania?id=3936--10&stream=https://pa-se2.arcadis-ivds.com:8200/chan-3936/index.m3u8
+ // http://localhost:3000/pennsylvania?id=3936--10&stream=https://pa-se2.arcadis-ivds.com:8200/chan-3936/index.m3u8

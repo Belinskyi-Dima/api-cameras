@@ -15,6 +15,7 @@ const getStrimArkansasToken = require("./getStrimArkansasToken");
 const {getIllinoisData, fetchData, getIllinoisFromIllinoisDbJson} = require("./getIllinoisData");
 const illinosi_db = require("./getIllinoisData/illinosi_db.json");
 const getStrimPannsylvania = require("./getStrimPannsylvania");
+const {getOklahomaCameras} = require("./oklahoma/index_semphore");
 // const getMassachusetts = require("./getMassachusetts");
 // const getMassachusettsImg = require("./getMassachusettsImg");
 // const {fetchDataMass, findMassImg} = require("./findMassImg/index.js");
@@ -214,7 +215,7 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Methods', 'GET'); // Дозволяємо тільки GET запити
     next();
 });
-  app.get("/illinois", async (req, res) => {
+app.get("/illinois", async (req, res) => {
     
     
     const { id } = req.query;
@@ -264,6 +265,8 @@ app.use((req, res, next) => {
         //         return res.status(500).send('Сталася внутрішня помилка сервера');
     }
     })
+ 
+// ----------pennsylvania
     app.options('/pennsylvania', cors(corsOptions));
     app.get("/pennsylvania", async (req, res) => {
         // const json = require("./db.json");
@@ -288,9 +291,14 @@ app.use((req, res, next) => {
         }
     
     });
-
+// ============ oklahoma ==================
+   app.get("/oklahoma/:id",getOklahomaCameras)
+   
     // https://api-cameras.onrender.com/illinois?id=1487
     // http://localhost:3000/arkansas?id=314
+
+    // http://localhost:3000/oklahoma/3
+
     // https://api-cameras.onrender.com/illinois?id=1639
     // https://api-cameras.onrender.com/pennsylvania?id=3942--10&stream=https://pa-se3.arcadis-ivds.com:8200/chan-3942/index.m3u8
     app.listen(3000)

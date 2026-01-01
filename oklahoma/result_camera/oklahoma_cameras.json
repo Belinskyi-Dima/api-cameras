@@ -1,0 +1,1256 @@
+{
+  "updatedAt": "2025-12-03T08:15:26.709Z",
+  "items": [
+    {
+      "id": 3,
+      "cameraId": 1365986,
+      "name": "I-44 & I-240 N",
+      "lat": "35.39637",
+      "lon": "-97.57406",
+      "streamKey": "de3009decda7bc63.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/de3009decda7bc63.stream/playlist.m3u8"
+    },
+    {
+      "id": 4,
+      "cameraId": 1365990,
+      "name": "I-44 & S59th N",
+      "lat": "35.40667",
+      "lon": "-97.57711",
+      "streamKey": "5a7dfecf5abe7d55.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/5a7dfecf5abe7d55.stream/playlist.m3u8"
+    },
+    {
+      "id": 5,
+      "cameraId": 1365995,
+      "name": "I-44 & Airport Rd N",
+      "lat": "35.4155",
+      "lon": "-97.5812",
+      "streamKey": "a3dffaaff5b9113b.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/a3dffaaff5b9113b.stream/playlist.m3u8"
+    },
+    {
+      "id": 6,
+      "cameraId": 1365998,
+      "name": "I-44 & S29th N",
+      "lat": "35.43513",
+      "lon": "-97.56993",
+      "streamKey": "0df6c31929db87c5.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/0df6c31929db87c5.stream/playlist.m3u8"
+    },
+    {
+      "id": 7,
+      "cameraId": 1366004,
+      "name": "I-44 & I-40 N",
+      "lat": "35.45988315",
+      "lon": "-97.57485429",
+      "streamKey": "37ff44e26dbf7737.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/37ff44e26dbf7737.stream/playlist.m3u8"
+    },
+    {
+      "id": 8,
+      "cameraId": 1366014,
+      "name": "I-44 & N10th N",
+      "lat": "35.47842",
+      "lon": "-97.57879",
+      "streamKey": "c249ff03a994132b.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/c249ff03a994132b.stream/playlist.m3u8"
+    },
+    {
+      "id": 9,
+      "cameraId": 1366019,
+      "name": "I-44 & N23rd N",
+      "lat": "35.4932",
+      "lon": "-97.57904",
+      "streamKey": "368365ec53a57845.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/368365ec53a57845.stream/playlist.m3u8"
+    },
+    {
+      "id": 10,
+      "cameraId": 1366025,
+      "name": "I-44 & SH-66 N",
+      "lat": "35.51097978",
+      "lon": "-97.57564991",
+      "streamKey": "3f1a236d570f6254.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/3f1a236d570f6254.stream/playlist.m3u8"
+    },
+    {
+      "id": 11,
+      "cameraId": 1366439,
+      "name": "SH-74 & SH-3 E",
+      "lat": "35.53269025",
+      "lon": "-97.57983148",
+      "streamKey": "d5669105cd1dd5cb.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/d5669105cd1dd5cb.stream/playlist.m3u8"
+    },
+    {
+      "id": 12,
+      "cameraId": 1366034,
+      "name": "SH-74 & Grand S",
+      "lat": "35.54459601",
+      "lon": "-97.57483854",
+      "streamKey": "88b52a04e2ef9747.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/88b52a04e2ef9747.stream/playlist.m3u8"
+    },
+    {
+      "id": 13,
+      "cameraId": 1366037,
+      "name": "SH-74 & Britton N",
+      "lat": "35.56558",
+      "lon": "-97.57484",
+      "streamKey": "81d0b4a11f7c246f.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/81d0b4a11f7c246f.stream/playlist.m3u8"
+    },
+    {
+      "id": 14,
+      "cameraId": 1366042,
+      "name": "SH-74 & Hefner S",
+      "lat": "35.58018",
+      "lon": "-97.57991",
+      "streamKey": "9c9e5c33267d7b5f.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/9c9e5c33267d7b5f.stream/playlist.m3u8"
+    },
+    {
+      "id": 15,
+      "cameraId": 1366045,
+      "name": "SH-74 & N122nd S",
+      "lat": "35.5947",
+      "lon": "-97.58495",
+      "streamKey": "01c2dc92cd7d988c.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/01c2dc92cd7d988c.stream/playlist.m3u8"
+    },
+    {
+      "id": 16,
+      "cameraId": 1366049,
+      "name": "SH-74 & Memorial N",
+      "lat": "35.60948",
+      "lon": "-97.58505",
+      "streamKey": "70313fd83f4a0de2.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/70313fd83f4a0de2.stream/playlist.m3u8"
+    },
+    {
+      "id": 17,
+      "cameraId": 1366009,
+      "name": "I-40 & Meridian N",
+      "lat": "35.45997",
+      "lon": "-97.60125",
+      "streamKey": "b92585481cea2be3.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/b92585481cea2be3.stream/playlist.m3u8"
+    },
+    {
+      "id": 18,
+      "cameraId": 1366115,
+      "name": "I-40 & May E",
+      "lat": "35.461165",
+      "lon": "-97.566121",
+      "streamKey": "f8d8dd1b41169b4d.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/f8d8dd1b41169b4d.stream/playlist.m3u8"
+    },
+    {
+      "id": 19,
+      "cameraId": 1366120,
+      "name": "I-40 & Agnew W",
+      "lat": "35.461126",
+      "lon": "-97.55554",
+      "streamKey": "b93abea39a48bd8a.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/b93abea39a48bd8a.stream/playlist.m3u8"
+    },
+    {
+      "id": 20,
+      "cameraId": 1366101,
+      "name": "I-40 & Penn W",
+      "lat": "35.461465",
+      "lon": "-97.546838",
+      "streamKey": "b430661f6a204594.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/b430661f6a204594.stream/playlist.m3u8"
+    },
+    {
+      "id": 21,
+      "cameraId": 1366104,
+      "name": "I-40 & Western W",
+      "lat": "35.458261",
+      "lon": "-97.531872",
+      "streamKey": "8ec5f669b698db80.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/8ec5f669b698db80.stream/playlist.m3u8"
+    },
+    {
+      "id": 22,
+      "cameraId": 1366075,
+      "name": "I-35 & N12th S",
+      "lat": "35.34903757",
+      "lon": "-97.49519134",
+      "streamKey": "32447ec84da080da.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/32447ec84da080da.stream/playlist.m3u8"
+    },
+    {
+      "id": 23,
+      "cameraId": 1366069,
+      "name": "I-35 & N27th N",
+      "lat": "35.36284253",
+      "lon": "-97.49503711",
+      "streamKey": "27aa361fc5d26def.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/27aa361fc5d26def.stream/playlist.m3u8"
+    },
+    {
+      "id": 24,
+      "cameraId": 1366066,
+      "name": "I-35 & S89th N",
+      "lat": "35.37616664",
+      "lon": "-97.49522554",
+      "streamKey": "39f44466ff976da6.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/39f44466ff976da6.stream/playlist.m3u8"
+    },
+    {
+      "id": 27,
+      "cameraId": 1366054,
+      "name": "I-35 & I-240 E",
+      "lat": "35.39367",
+      "lon": "-97.49787",
+      "streamKey": "51854fc7a3f0ed16.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/51854fc7a3f0ed16.stream/playlist.m3u8"
+    },
+    {
+      "id": 28,
+      "cameraId": 1366079,
+      "name": "I-35 & S59th S",
+      "lat": "35.40679572",
+      "lon": "-97.49404",
+      "streamKey": "97066ddd1919ff9f.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/97066ddd1919ff9f.stream/playlist.m3u8"
+    },
+    {
+      "id": 29,
+      "cameraId": 1366063,
+      "name": "I-35 & S36th S",
+      "lat": "35.427937",
+      "lon": "-97.485684",
+      "streamKey": "dfda03e3b2e7e084.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/dfda03e3b2e7e084.stream/playlist.m3u8"
+    },
+    {
+      "id": 30,
+      "cameraId": 1366113,
+      "name": "I-35 & S29th N",
+      "lat": "35.435499",
+      "lon": "-97.485824",
+      "streamKey": "91e7ed85fd818d86.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/91e7ed85fd818d86.stream/playlist.m3u8"
+    },
+    {
+      "id": 31,
+      "cameraId": 1366082,
+      "name": "I-40 & I-35 E",
+      "lat": "35.462333",
+      "lon": "-97.490531",
+      "streamKey": "7d000bfe013b56df.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/7d000bfe013b56df.stream/playlist.m3u8"
+    },
+    {
+      "id": 32,
+      "cameraId": 1366135,
+      "name": "I-40 & Shields N",
+      "lat": "35.455475",
+      "lon": "-97.514",
+      "streamKey": "8b34d5b1c845191c.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/8b34d5b1c845191c.stream/playlist.m3u8"
+    },
+    {
+      "id": 33,
+      "cameraId": 1366089,
+      "name": "I-40 & Reno N",
+      "lat": "35.463533",
+      "lon": "-97.461758",
+      "streamKey": "6d5f62f26d0f0338.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/6d5f62f26d0f0338.stream/playlist.m3u8"
+    },
+    {
+      "id": 34,
+      "cameraId": 1365950,
+      "name": "I-40 & S29th NW",
+      "lat": "35.43517",
+      "lon": "-97.40991",
+      "streamKey": "427fd2bce97de4c0.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/427fd2bce97de4c0.stream/playlist.m3u8"
+    },
+    {
+      "id": 35,
+      "cameraId": 1365953,
+      "name": "I-40 & Air Depot N",
+      "lat": "35.43441",
+      "lon": "-97.40589",
+      "streamKey": "8988e75e0effebdf.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/8988e75e0effebdf.stream/playlist.m3u8"
+    },
+    {
+      "id": 36,
+      "cameraId": 1365958,
+      "name": "I-40 & Eaker Gate E",
+      "lat": "35.43455",
+      "lon": "-97.39814",
+      "streamKey": "02edae3db7bd33b6.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/02edae3db7bd33b6.stream/playlist.m3u8"
+    },
+    {
+      "id": 37,
+      "cameraId": 1365961,
+      "name": "I-40 & A Ave E",
+      "lat": "35.4352",
+      "lon": "-97.38692",
+      "streamKey": "35cd72d523da3551.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/35cd72d523da3551.stream/playlist.m3u8"
+    },
+    {
+      "id": 40,
+      "cameraId": 1366127,
+      "name": "OKC Blvd & Penn E",
+      "lat": "35.464925",
+      "lon": "-97.548119",
+      "streamKey": "2b92c4cd698038fd.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/2b92c4cd698038fd.stream/playlist.m3u8"
+    },
+    {
+      "id": 41,
+      "cameraId": 1366142,
+      "name": "OKC Blvd & Western W",
+      "lat": "35.46562",
+      "lon": "-97.53125",
+      "streamKey": "25f975bdbe3d0756.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/25f975bdbe3d0756.stream/playlist.m3u8"
+    },
+    {
+      "id": 42,
+      "cameraId": 1366140,
+      "name": "OKC Blvd & Lee W",
+      "lat": "35.462514",
+      "lon": "-97.523919",
+      "streamKey": "44ad3975ce1f932a.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/44ad3975ce1f932a.stream/playlist.m3u8"
+    },
+    {
+      "id": 45,
+      "cameraId": 1366087,
+      "name": "I-35 & Reno E",
+      "lat": "35.464069",
+      "lon": "-97.473067",
+      "streamKey": "5aaa93d144af0ad5.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/5aaa93d144af0ad5.stream/playlist.m3u8"
+    },
+    {
+      "id": 67,
+      "cameraId": 1365973,
+      "name": "I-44 & W I-244 E",
+      "lat": "36.08797",
+      "lon": "-96.04051",
+      "streamKey": "7f675075f70a37c1.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/7f675075f70a37c1.stream/playlist.m3u8"
+    },
+    {
+      "id": 68,
+      "cameraId": 1365944,
+      "name": "I-244 & SW Blvd N",
+      "lat": "36.12221084",
+      "lon": "-96.00868937",
+      "streamKey": "1567dc463ce618bf.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/1567dc463ce618bf.stream/playlist.m3u8"
+    },
+    {
+      "id": 69,
+      "cameraId": 1365927,
+      "name": "I-244 & US-169 N",
+      "lat": "36.16498",
+      "lon": "-95.85945",
+      "streamKey": "001b663473b03e71.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/001b663473b03e71.stream/playlist.m3u8"
+    },
+    {
+      "id": 70,
+      "cameraId": 1365932,
+      "name": "I-44 & E I-244 E",
+      "lat": "36.161382",
+      "lon": "-95.826574",
+      "streamKey": "e2c4910e7f17e6a6.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/e2c4910e7f17e6a6.stream/playlist.m3u8"
+    },
+    {
+      "id": 71,
+      "cameraId": 1365981,
+      "name": "SH-51 & US-64/75 N",
+      "lat": "36.14241",
+      "lon": "-95.97886",
+      "streamKey": "95483cfb87c6fb13.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/95483cfb87c6fb13.stream/playlist.m3u8"
+    },
+    {
+      "id": 72,
+      "cameraId": 1366617,
+      "name": "I-44 & SH-51 SW",
+      "lat": "36.11393",
+      "lon": "-95.89715",
+      "streamKey": "439c909b0294c8e3.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/439c909b0294c8e3.stream/playlist.m3u8"
+    },
+    {
+      "id": 73,
+      "cameraId": 1365968,
+      "name": "US-169 & SH-51 N",
+      "lat": "36.09775",
+      "lon": "-95.8592",
+      "streamKey": "5d6d8f291a2e9a54.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/5d6d8f291a2e9a54.stream/playlist.m3u8"
+    },
+    {
+      "id": 74,
+      "cameraId": 1365937,
+      "name": "SH-51 & S 129th E SE",
+      "lat": "36.08578",
+      "lon": "-95.82837",
+      "streamKey": "6d4a88098e8ac0df.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/6d4a88098e8ac0df.stream/playlist.m3u8"
+    },
+    {
+      "id": 75,
+      "cameraId": 1365939,
+      "name": "US-169 & E 71st N",
+      "lat": "36.06105",
+      "lon": "-95.85827",
+      "streamKey": "4db5de963fcbb91e.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/4db5de963fcbb91e.stream/playlist.m3u8"
+    },
+    {
+      "id": 76,
+      "cameraId": 1365978,
+      "name": "I-44 & US-169 N",
+      "lat": "36.13892",
+      "lon": "-95.86049",
+      "streamKey": "3fde9b6045f5c879.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/3fde9b6045f5c879.stream/playlist.m3u8"
+    },
+    {
+      "id": 77,
+      "cameraId": 1366108,
+      "name": "I-44 & N 193rd E N",
+      "lat": "36.162145",
+      "lon": "-95.76191",
+      "streamKey": "7e1d1820e20bc49e.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/7e1d1820e20bc49e.stream/playlist.m3u8"
+    },
+    {
+      "id": 79,
+      "cameraId": 1366176,
+      "name": "I-235 & N13th N",
+      "lat": "35.48214091",
+      "lon": "-97.51050174",
+      "streamKey": "3797faba2c0d0980.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/3797faba2c0d0980.stream/playlist.m3u8"
+    },
+    {
+      "id": 80,
+      "cameraId": 1366199,
+      "name": "I-235 & N23rd N",
+      "lat": "35.49209705",
+      "lon": "-97.51129835",
+      "streamKey": "a8ca427641cfde9e.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/a8ca427641cfde9e.stream/playlist.m3u8"
+    },
+    {
+      "id": 81,
+      "cameraId": 1366203,
+      "name": "I-235 & N36th N",
+      "lat": "35.50887623",
+      "lon": "-97.51498773",
+      "streamKey": "774e75185f9798ed.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/774e75185f9798ed.stream/playlist.m3u8"
+    },
+    {
+      "id": 82,
+      "cameraId": 1366182,
+      "name": "I-35 & S15th E",
+      "lat": "35.44961233",
+      "lon": "-97.48711422",
+      "streamKey": "70231c40003d9a21.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/70231c40003d9a21.stream/playlist.m3u8"
+    },
+    {
+      "id": 83,
+      "cameraId": 1366189,
+      "name": "I-35 & S66th N",
+      "lat": "35.39924263",
+      "lon": "-97.49541565",
+      "streamKey": "dd2debb3ae326e00.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/dd2debb3ae326e00.stream/playlist.m3u8"
+    },
+    {
+      "id": 84,
+      "cameraId": 1366184,
+      "name": "I-35 & S44th N",
+      "lat": "35.42054823",
+      "lon": "-97.4886243",
+      "streamKey": "e6e2f052ac51fea2.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/e6e2f052ac51fea2.stream/playlist.m3u8"
+    },
+    {
+      "id": 85,
+      "cameraId": 1366194,
+      "name": "I-40 & I-235 S",
+      "lat": "35.46259723",
+      "lon": "-97.49594271",
+      "streamKey": "af5e66cc0937b1f5.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/af5e66cc0937b1f5.stream/playlist.m3u8"
+    },
+    {
+      "id": 87,
+      "cameraId": 1366057,
+      "name": "I-44 & Lincoln W",
+      "lat": "35.52921",
+      "lon": "-97.50356",
+      "streamKey": "965720c57f68dcc8.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/965720c57f68dcc8.stream/playlist.m3u8"
+    },
+    {
+      "id": 88,
+      "cameraId": 1366060,
+      "name": "I-44 & Broadway Ext W",
+      "lat": "35.52905",
+      "lon": "-97.515992",
+      "streamKey": "8ed807827a7f6bda.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/8ed807827a7f6bda.stream/playlist.m3u8"
+    },
+    {
+      "id": 89,
+      "cameraId": 1366294,
+      "name": "US-169 & E 61st N",
+      "lat": "36.07579572",
+      "lon": "-95.85921049",
+      "streamKey": "cdadb75ee8a5cd99.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/cdadb75ee8a5cd99.stream/playlist.m3u8"
+    },
+    {
+      "id": 90,
+      "cameraId": 1366318,
+      "name": "US-169 & E 81st N",
+      "lat": "36.04686337",
+      "lon": "-95.85895528",
+      "streamKey": "97ff15df1f4c5c1a.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/97ff15df1f4c5c1a.stream/playlist.m3u8"
+    },
+    {
+      "id": 91,
+      "cameraId": 1366322,
+      "name": "US-169 & E 91st N",
+      "lat": "36.03231888",
+      "lon": "-95.85978378",
+      "streamKey": "34e6c8fac6bb616d.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/34e6c8fac6bb616d.stream/playlist.m3u8"
+    },
+    {
+      "id": 92,
+      "cameraId": 1366274,
+      "name": "US-169 & Pine N",
+      "lat": "36.17722817",
+      "lon": "-95.85656047",
+      "streamKey": "5bd9878d2c4dff08.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/5bd9878d2c4dff08.stream/playlist.m3u8"
+    },
+    {
+      "id": 93,
+      "cameraId": 1366241,
+      "name": "I-44 & Yale N",
+      "lat": "36.09528275",
+      "lon": "-95.92279226",
+      "streamKey": "c788a98762dbe907.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/c788a98762dbe907.stream/playlist.m3u8"
+    },
+    {
+      "id": 94,
+      "cameraId": 1366246,
+      "name": "I-44 & 41st N",
+      "lat": "36.1026692",
+      "lon": "-95.91293782",
+      "streamKey": "fc375a3da08a2b82.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/fc375a3da08a2b82.stream/playlist.m3u8"
+    },
+    {
+      "id": 95,
+      "cameraId": 1366289,
+      "name": "SH-51 & Lewis N",
+      "lat": "36.14292851",
+      "lon": "-95.95861048",
+      "streamKey": "6b6905317d7b66f9.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/6b6905317d7b66f9.stream/playlist.m3u8"
+    },
+    {
+      "id": 96,
+      "cameraId": 1366284,
+      "name": "SH-51 & Sheridan N",
+      "lat": "36.11549118",
+      "lon": "-95.90493947",
+      "streamKey": "a56b58554be687f4.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/a56b58554be687f4.stream/playlist.m3u8"
+    },
+    {
+      "id": 97,
+      "cameraId": 1366208,
+      "name": "I-44 & E 11th St NE",
+      "lat": "36.148332",
+      "lon": "-95.847091",
+      "streamKey": "9439db7674cff4d7.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/9439db7674cff4d7.stream/playlist.m3u8"
+    },
+    {
+      "id": 99,
+      "cameraId": 1366222,
+      "name": "I-44 & Memorial S",
+      "lat": "36.120442",
+      "lon": "-95.886352",
+      "streamKey": "cfb18b8a5fed1100.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/cfb18b8a5fed1100.stream/playlist.m3u8"
+    },
+    {
+      "id": 100,
+      "cameraId": 1366255,
+      "name": "I-44 & N 165th E E",
+      "lat": "36.16283835",
+      "lon": "-95.79671502",
+      "streamKey": "7474c7b7c23693de.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/7474c7b7c23693de.stream/playlist.m3u8"
+    },
+    {
+      "id": 101,
+      "cameraId": 1366215,
+      "name": "I-44 & S 129th E N",
+      "lat": "36.158389",
+      "lon": "-95.832829",
+      "streamKey": "2b62e258ab15481c.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/2b62e258ab15481c.stream/playlist.m3u8"
+    },
+    {
+      "id": 102,
+      "cameraId": 1366268,
+      "name": "I-244 & Garnett N",
+      "lat": "36.16646877",
+      "lon": "-95.85071459",
+      "streamKey": "fc00de9bfe886890.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/fc00de9bfe886890.stream/playlist.m3u8"
+    },
+    {
+      "id": 103,
+      "cameraId": 1366279,
+      "name": "I-244 & Memorial N",
+      "lat": "36.16223811",
+      "lon": "-95.88692307",
+      "streamKey": "35d16aea2d0fa053.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/35d16aea2d0fa053.stream/playlist.m3u8"
+    },
+    {
+      "id": 104,
+      "cameraId": 1366263,
+      "name": "I-244 & N 129th E N",
+      "lat": "36.16575985",
+      "lon": "-95.83312064",
+      "streamKey": "209cc461135d2d73.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/209cc461135d2d73.stream/playlist.m3u8"
+    },
+    {
+      "id": 105,
+      "cameraId": 1366236,
+      "name": "I-244 & US-412 N",
+      "lat": "36.15944045",
+      "lon": "-96.00216933",
+      "streamKey": "cd4502973db13b19.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/cd4502973db13b19.stream/playlist.m3u8"
+    },
+    {
+      "id": 107,
+      "cameraId": 1366227,
+      "name": "I-244 & US-75 N S",
+      "lat": "36.160796",
+      "lon": "-95.980449",
+      "streamKey": "f8a38965002425da.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/f8a38965002425da.stream/playlist.m3u8"
+    },
+    {
+      "id": 109,
+      "cameraId": 1366250,
+      "name": "US-75 & Denver N",
+      "lat": "36.14456271",
+      "lon": "-95.99211529",
+      "streamKey": "7d0d4f29a4054944.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/7d0d4f29a4054944.stream/playlist.m3u8"
+    },
+    {
+      "id": 110,
+      "cameraId": 1366258,
+      "name": "US-412 & Creek N",
+      "lat": "36.16255354",
+      "lon": "-95.73171705",
+      "streamKey": "ac264a6147e1a091.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/ac264a6147e1a091.stream/playlist.m3u8"
+    },
+    {
+      "id": 111,
+      "cameraId": 1366132,
+      "name": "I-235 & Sheridan S",
+      "lat": "35.466328",
+      "lon": "-97.499822",
+      "streamKey": "f480f8f881bd472f.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/f480f8f881bd472f.stream/playlist.m3u8"
+    },
+    {
+      "id": 112,
+      "cameraId": 1365947,
+      "name": "I-235 & 5th N",
+      "lat": "35.47305",
+      "lon": "-97.50718",
+      "streamKey": "5a7d2919ef06e1fe.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/5a7d2919ef06e1fe.stream/playlist.m3u8"
+    },
+    {
+      "id": 114,
+      "cameraId": 1366172,
+      "name": "I-35 & Chikaskia River N",
+      "lat": "36.90651602",
+      "lon": "-97.35317387",
+      "streamKey": "14bef5397e5a0a3c.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/14bef5397e5a0a3c.stream/playlist.m3u8"
+    },
+    {
+      "id": 115,
+      "cameraId": 1366174,
+      "name": "I-40 & Texas Line E",
+      "lat": "35.22669291",
+      "lon": "-100.00046321",
+      "streamKey": "8cc68c011e86a0c6.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/8cc68c011e86a0c6.stream/playlist.m3u8"
+    },
+    {
+      "id": 116,
+      "cameraId": 1366167,
+      "name": "US-62 & 52nd N",
+      "lat": "34.638166",
+      "lon": "-98.456842",
+      "streamKey": "89cf4f796b711a1e.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/89cf4f796b711a1e.stream/playlist.m3u8"
+    },
+    {
+      "id": 118,
+      "cameraId": 1366165,
+      "name": "US-62 & Sheridan E",
+      "lat": "34.637933",
+      "lon": "-98.421649",
+      "streamKey": "142eb5a6f5451f96.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/142eb5a6f5451f96.stream/playlist.m3u8"
+    },
+    {
+      "id": 119,
+      "cameraId": 1366154,
+      "name": "I-44 & Sheridan (Key Gate) N",
+      "lat": "34.660625",
+      "lon": "-98.38234",
+      "streamKey": "b62a210934b5d1dd.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/b62a210934b5d1dd.stream/playlist.m3u8"
+    },
+    {
+      "id": 121,
+      "cameraId": 1366330,
+      "name": "US-169 & E 46th N N",
+      "lat": "36.22023407",
+      "lon": "-95.85207809",
+      "streamKey": "973b66301d7526b6.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/973b66301d7526b6.stream/playlist.m3u8"
+    },
+    {
+      "id": 122,
+      "cameraId": 1366314,
+      "name": "US-169 & E 36th N N",
+      "lat": "36.20578987",
+      "lon": "-95.85200701",
+      "streamKey": "5177a3996629e896.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/5177a3996629e896.stream/playlist.m3u8"
+    },
+    {
+      "id": 123,
+      "cameraId": 1366336,
+      "name": "SH-51 & Elm S",
+      "lat": "36.07067354",
+      "lon": "-95.79721562",
+      "streamKey": "219a148486e0d953.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/219a148486e0d953.stream/playlist.m3u8"
+    },
+    {
+      "id": 124,
+      "cameraId": 1366085,
+      "name": "I-40 & OKC Blvd W",
+      "lat": "35.461478",
+      "lon": "-97.501475",
+      "streamKey": "fbd6a048000b4a2f.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/fbd6a048000b4a2f.stream/playlist.m3u8"
+    },
+    {
+      "id": 125,
+      "cameraId": 1366159,
+      "name": "I-44 & Post (Gate 2) S",
+      "lat": "34.643516",
+      "lon": "-98.389198",
+      "streamKey": "f26192a9f02ce489.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/f26192a9f02ce489.stream/playlist.m3u8"
+    },
+    {
+      "id": 127,
+      "cameraId": 1366341,
+      "name": "Kilpatrick Tpk & Eastern E",
+      "lat": "35.601159",
+      "lon": "-97.46968",
+      "streamKey": "22f515131d6680c5.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/22f515131d6680c5.stream/playlist.m3u8"
+    },
+    {
+      "id": 130,
+      "cameraId": 1366343,
+      "name": "I-44 & S 96th N",
+      "lat": "35.37111421",
+      "lon": "-97.57730381",
+      "streamKey": "53b2041fbba3532f.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/53b2041fbba3532f.stream/playlist.m3u8"
+    },
+    {
+      "id": 131,
+      "cameraId": 1366344,
+      "name": "Turner Tpk & OKC E",
+      "lat": "35.60343357",
+      "lon": "-97.40374545",
+      "streamKey": "7650672d71a2aa0b.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/7650672d71a2aa0b.stream/playlist.m3u8"
+    },
+    {
+      "id": 132,
+      "cameraId": 1366347,
+      "name": "I-35 & Kansas S",
+      "lat": "36.98480598",
+      "lon": "-97.34556735",
+      "streamKey": "b132d7c841638450.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/b132d7c841638450.stream/playlist.m3u8"
+    },
+    {
+      "id": 136,
+      "cameraId": 1366428,
+      "name": "I-40 & Peebly W",
+      "lat": "35.3845",
+      "lon": "-97.2131",
+      "streamKey": "39eaf54168f21adc.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/39eaf54168f21adc.stream/playlist.m3u8"
+    },
+    {
+      "id": 137,
+      "cameraId": 1366430,
+      "name": "Sequoyah POE SW",
+      "lat": "35.43725613",
+      "lon": "-94.47723945",
+      "streamKey": "f72af437d7661a69.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/f72af437d7661a69.stream/playlist.m3u8"
+    },
+    {
+      "id": 138,
+      "cameraId": 1366567,
+      "name": "Kay POE N Entry",
+      "lat": "36.98286482",
+      "lon": "-97.3466751",
+      "streamKey": "01622adc3317f0f1.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/01622adc3317f0f1.stream/playlist.m3u8"
+    },
+    {
+      "id": 139,
+      "cameraId": 1366145,
+      "name": "I-35 & 2nd St N",
+      "lat": "35.6525",
+      "lon": "-97.4239",
+      "streamKey": "f5777902755ad944.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/f5777902755ad944.stream/playlist.m3u8"
+    },
+    {
+      "id": 140,
+      "cameraId": 1366450,
+      "name": "Gilcrease & S49thW E",
+      "lat": "36.0892",
+      "lon": "-96.0481768",
+      "streamKey": "844eb2ac00423e52.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/844eb2ac00423e52.stream/playlist.m3u8"
+    },
+    {
+      "id": 141,
+      "cameraId": 1366453,
+      "name": "Gilcrease & W 2nd S",
+      "lat": "36.152465",
+      "lon": "-96.05729",
+      "streamKey": "2e2250616f055a8f.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/2e2250616f055a8f.stream/playlist.m3u8"
+    },
+    {
+      "id": 146,
+      "cameraId": 1366657,
+      "name": "Turner Tpk & Creek Tpk N",
+      "lat": "36.02908",
+      "lon": "-96.08847",
+      "streamKey": "b512d8c3f4d2f614.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/b512d8c3f4d2f614.stream/playlist.m3u8"
+    },
+    {
+      "id": 147,
+      "cameraId": 1366548,
+      "name": "Creek Tpk & US-75 W",
+      "lat": "36.00889",
+      "lon": "-96.01004",
+      "streamKey": "9a18cb17a496ae9e.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/9a18cb17a496ae9e.stream/playlist.m3u8"
+    },
+    {
+      "id": 148,
+      "cameraId": 1366551,
+      "name": "Creek Tpk & Memorial N",
+      "lat": "36.02506",
+      "lon": "-95.88693",
+      "streamKey": "c8277974f42332b3.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/c8277974f42332b3.stream/playlist.m3u8"
+    },
+    {
+      "id": 149,
+      "cameraId": 1366554,
+      "name": "Creek Tpk & Mingo W",
+      "lat": "36.026125",
+      "lon": "-95.86871",
+      "streamKey": "97bd8677a163a51c.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/97bd8677a163a51c.stream/playlist.m3u8"
+    },
+    {
+      "id": 150,
+      "cameraId": 1366575,
+      "name": "Creek Tpk & Muskogee Tpk S",
+      "lat": "36.04688",
+      "lon": "-95.73895",
+      "streamKey": "3bf673fda6e75605.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/3bf673fda6e75605.stream/playlist.m3u8"
+    },
+    {
+      "id": 151,
+      "cameraId": 1366569,
+      "name": "I-35 & JKT S",
+      "lat": "35.601362",
+      "lon": "-97.42766",
+      "streamKey": "2b43d8b123a9dfb4.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/2b43d8b123a9dfb4.stream/playlist.m3u8"
+    },
+    {
+      "id": 152,
+      "cameraId": 1366559,
+      "name": "I-40 & JKT S",
+      "lat": "35.463214",
+      "lon": "-97.711942",
+      "streamKey": "9c4fd4009d172ceb.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/9c4fd4009d172ceb.stream/playlist.m3u8"
+    },
+    {
+      "id": 153,
+      "cameraId": 1366504,
+      "name": "JKT & US-77 S",
+      "lat": "35.5998",
+      "lon": "-97.503086",
+      "streamKey": "6df3da5bd45ec875.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/6df3da5bd45ec875.stream/playlist.m3u8"
+    },
+    {
+      "id": 154,
+      "cameraId": 1366527,
+      "name": "JKT & SH-152 W",
+      "lat": "35.41371",
+      "lon": "-97.65653",
+      "streamKey": "ca9a3bcc3eac6ef6.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/ca9a3bcc3eac6ef6.stream/playlist.m3u8"
+    },
+    {
+      "id": 155,
+      "cameraId": 1366470,
+      "name": "US-69 & C Tree NE",
+      "lat": "34.83621",
+      "lon": "-95.83708",
+      "streamKey": "3812f6f21145982f.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/3812f6f21145982f.stream/playlist.m3u8"
+    },
+    {
+      "id": 156,
+      "cameraId": 1366483,
+      "name": "I-35 & S 25th S",
+      "lat": "35.630175",
+      "lon": "-97.424852",
+      "streamKey": "b500e1831dd8435a.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/b500e1831dd8435a.stream/playlist.m3u8"
+    },
+    {
+      "id": 162,
+      "cameraId": 1366578,
+      "name": "I-40 & Kickapoo",
+      "lat": "35.38382",
+      "lon": "-97.19289",
+      "streamKey": "96e0c600554ad47c.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/96e0c600554ad47c.stream/playlist.m3u8"
+    },
+    {
+      "id": 163,
+      "cameraId": 1366610,
+      "name": "I-35 & SH-9 E N",
+      "lat": "35.19785",
+      "lon": "-97.48076",
+      "streamKey": "83a7ade3ebd2b5c1.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/83a7ade3ebd2b5c1.stream/playlist.m3u8"
+    },
+    {
+      "id": 164,
+      "cameraId": 1366643,
+      "name": "I-35 & SH-9 W N",
+      "lat": "35.1803",
+      "lon": "-97.49215",
+      "streamKey": "0dcb18944e51d2de.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/0dcb18944e51d2de.stream/playlist.m3u8"
+    },
+    {
+      "id": 165,
+      "cameraId": 1366632,
+      "name": "I-35 & Franklin N",
+      "lat": "35.27893",
+      "lon": "-97.4854",
+      "streamKey": "4025b71bcc146e12.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/4025b71bcc146e12.stream/playlist.m3u8"
+    },
+    {
+      "id": 166,
+      "cameraId": 1366633,
+      "name": "I-35 & Robinson N",
+      "lat": "35.23327",
+      "lon": "-97.4859",
+      "streamKey": "aef7e3cd1ddc1118.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/aef7e3cd1ddc1118.stream/playlist.m3u8"
+    },
+    {
+      "id": 167,
+      "cameraId": 1366646,
+      "name": "I-35 & Tecumseh N",
+      "lat": "35.2626",
+      "lon": "-97.48492",
+      "streamKey": "95ff6373bdeab0c0.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/95ff6373bdeab0c0.stream/playlist.m3u8"
+    },
+    {
+      "id": 168,
+      "cameraId": 1366498,
+      "name": "I-240 & Douglas N",
+      "lat": "35.38885",
+      "lon": "-97.37154",
+      "streamKey": "709b4bb21fc94ac7.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/709b4bb21fc94ac7.stream/playlist.m3u8"
+    },
+    {
+      "id": 169,
+      "cameraId": 1366639,
+      "name": "US-62 & SH-9 E",
+      "lat": "35.18241",
+      "lon": "-97.59929",
+      "streamKey": "a63f3aa81ad67bf8.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/a63f3aa81ad67bf8.stream/playlist.m3u8"
+    },
+    {
+      "id": 170,
+      "cameraId": 1366589,
+      "name": "JKT & SH-66 ",
+      "lat": "35.51555",
+      "lon": "-97.69677",
+      "streamKey": "a957bf32ed307820.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/a957bf32ed307820.stream/playlist.m3u8"
+    },
+    {
+      "id": 171,
+      "cameraId": 1366583,
+      "name": "JKT & SH-3 N",
+      "lat": "35.5802",
+      "lon": "-97.68862",
+      "streamKey": "cce0acf7dea58a93.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/cce0acf7dea58a93.stream/playlist.m3u8"
+    },
+    {
+      "id": 172,
+      "cameraId": 1366621,
+      "name": "Creek Tpk & Riverside",
+      "lat": "36.019133",
+      "lon": "-95.948522",
+      "streamKey": "92df7e0084929457.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/92df7e0084929457.stream/playlist.m3u8"
+    },
+    {
+      "id": 173,
+      "cameraId": 1366629,
+      "name": "Creek & Elm",
+      "lat": "36.017121",
+      "lon": "-95.974184",
+      "streamKey": "abd3b7e9bb34b662.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/abd3b7e9bb34b662.stream/playlist.m3u8"
+    },
+    {
+      "id": 174,
+      "cameraId": 1366625,
+      "name": "Creek & Yale",
+      "lat": "36.025745",
+      "lon": "-95.921617",
+      "streamKey": "223927a3a4af500d.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/223927a3a4af500d.stream/playlist.m3u8"
+    },
+    {
+      "id": 175,
+      "cameraId": 1366599,
+      "name": "JKT & Penn W",
+      "lat": "35.609518",
+      "lon": "-97.549847",
+      "streamKey": "8ffe6b622c88077c.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/8ffe6b622c88077c.stream/playlist.m3u8"
+    },
+    {
+      "id": 176,
+      "cameraId": 1366661,
+      "name": "Turner Tpk & W 69th W",
+      "lat": "36.064789",
+      "lon": "-96.068862",
+      "streamKey": "b0dc5f8d88c4df7c.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/b0dc5f8d88c4df7c.stream/playlist.m3u8"
+    },
+    {
+      "id": 177,
+      "cameraId": 1366663,
+      "name": "Turner Tpk & W 81st E",
+      "lat": "36.047711",
+      "lon": "-96.078791",
+      "streamKey": "07f0413b88d505eb.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/07f0413b88d505eb.stream/playlist.m3u8"
+    },
+    {
+      "id": 178,
+      "cameraId": 1366667,
+      "name": "I-40 & MacArthur W",
+      "lat": "35.459784",
+      "lon": "-97.618541",
+      "streamKey": "17ef4d03de76cf28.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/17ef4d03de76cf28.stream/playlist.m3u8"
+    },
+    {
+      "id": 179,
+      "cameraId": 1366671,
+      "name": "I-40 & Council N",
+      "lat": "35.460058",
+      "lon": "-97.654622",
+      "streamKey": "83e97d2ca10491ea.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/83e97d2ca10491ea.stream/playlist.m3u8"
+    },
+    {
+      "id": 180,
+      "cameraId": 1366603,
+      "name": "SH-152 & Meridian N",
+      "lat": "35.423206",
+      "lon": "-97.601482",
+      "streamKey": "22a9fab3fa007ffb.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/22a9fab3fa007ffb.stream/playlist.m3u8"
+    },
+    {
+      "id": 181,
+      "cameraId": 1366595,
+      "name": "SH-152 & SW 44th W",
+      "lat": "35.420368",
+      "lon": "-97.632074",
+      "streamKey": "d3f7a71cf7334a35.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/d3f7a71cf7334a35.stream/playlist.m3u8"
+    },
+    {
+      "id": 182,
+      "cameraId": 1366653,
+      "name": "I-35 & NE 23rd N",
+      "lat": "35.492846",
+      "lon": "-97.464956",
+      "streamKey": "1a756ddab1d1f331.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/1a756ddab1d1f331.stream/playlist.m3u8"
+    },
+    {
+      "id": 183,
+      "cameraId": 1366563,
+      "name": "US-412 & N 33RD W",
+      "lat": "36.157778",
+      "lon": "-96.029618",
+      "streamKey": "ae507dfb7a0dc7c3.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/ae507dfb7a0dc7c3.stream/playlist.m3u8"
+    },
+    {
+      "id": 184,
+      "cameraId": 1366544,
+      "name": "US-75 & E 8th N",
+      "lat": "36.15099",
+      "lon": "-95.980935",
+      "streamKey": "c8bc5100cfcf9e60.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/c8bc5100cfcf9e60.stream/playlist.m3u8"
+    },
+    {
+      "id": 185,
+      "cameraId": 1366539,
+      "name": "SH-51 & Harvard NW",
+      "lat": "36.125727",
+      "lon": "-95.938824",
+      "streamKey": "c738f267f4a88f5d.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/c738f267f4a88f5d.stream/playlist.m3u8"
+    },
+    {
+      "id": 186,
+      "cameraId": 1366537,
+      "name": "SH-51 & E 31st NW",
+      "lat": "36.118359",
+      "lon": "-95.919065",
+      "streamKey": "967698b014b2919c.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/967698b014b2919c.stream/playlist.m3u8"
+    },
+    {
+      "id": 187,
+      "cameraId": 1366534,
+      "name": "SH-51 & E 41st SE",
+      "lat": "36.104631",
+      "lon": "-95.876482",
+      "streamKey": "c07e8582e81c6e71.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/c07e8582e81c6e71.stream/playlist.m3u8"
+    },
+    {
+      "id": 188,
+      "cameraId": 1366541,
+      "name": "SH-51 & Kenosha SE",
+      "lat": "36.060735",
+      "lon": "-95.76764",
+      "streamKey": "3ff6ef3fd67a2363.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/3ff6ef3fd67a2363.stream/playlist.m3u8"
+    },
+    {
+      "id": 200,
+      "cameraId": 1366565,
+      "name": "I-44 & Wellston W",
+      "lat": "35.678364",
+      "lon": "-97.054842",
+      "streamKey": "429e8fa2d4c9b463.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/429e8fa2d4c9b463.stream/playlist.m3u8"
+    },
+    {
+      "id": 203,
+      "cameraId": 1366611,
+      "name": "I-35 & Main N",
+      "lat": "35.218775",
+      "lon": "-97.485505",
+      "streamKey": "0f6f3b39abbac48b.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/0f6f3b39abbac48b.stream/playlist.m3u8"
+    },
+    {
+      "id": 204,
+      "cameraId": 1366665,
+      "name": "I-35 & SH-9 W 2 N",
+      "lat": "35.18178",
+      "lon": "-97.49497",
+      "streamKey": "493f42a32b2bb23e.stream",
+      "streamSrc": "https://oktraffic.org/streams/delay-stream/493f42a32b2bb23e.stream/playlist.m3u8"
+    }
+  ]
+}
