@@ -1,13 +1,20 @@
+// const getMassachusetts = require("./getMassachusetts");
+// const getMassachusettsImg = require("./getMassachusettsImg");
+// const {fetchDataMass, findMassImg} = require("./findMassImg/index.js");
+// const moment = require('moment');
+// const axios = require('axios');
+// const https = require('https');
+
 const express = require('express');
 // const fs = require('fs');
 const app = express();
-// const moment = require('moment');
+
 const cors = require('cors');
 const NodeCache = require('node-cache');
-// const https = require('https');
+
 const rateLimit = require('express-rate-limit');
 
-// const axios = require('axios');
+
 const fs = require('fs/promises');
 const getMontanaData = require("./getMontanaData");
 const getTexasData = require("./getTexasData");
@@ -16,21 +23,16 @@ const {getIllinoisData, fetchData, getIllinoisFromIllinoisDbJson} = require("./g
 const illinosi_db = require("./getIllinoisData/illinosi_db.json");
 const getStrimPannsylvania = require("./getStrimPannsylvania");
 const {getOklahomaCameras} = require("./oklahoma/index_semphore");
-// const getMassachusetts = require("./getMassachusetts");
-// const getMassachusettsImg = require("./getMassachusettsImg");
-// const {fetchDataMass, findMassImg} = require("./findMassImg/index.js");
-
-
 
 
 const corsOptions = {
     origin: '*', // Дозволяємо доступ з будь-якого джерела
-    // origin: ['https://admin-panel.truckerguideapp.com/', 'https://truckerguideapp.com/'],
+    // origin: ['https://admin-panel.truckerguideapp.com', 'https://truckerguideapp.com', 'https://admin-panel.truckmaster.app', 'https://truckmaster.app'],
     methods: ['OPTIONS','GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
 
     preflightContinue: false,
     optionsSuccessStatus: 204,
-    allowedHeaders: ['Content-Type', 'User-Agent', 'If-Modified-Since', 'Cache-Control', 'Range'], // Дозволяємо специфічні заголовки
+    // allowedHeaders: ['Content-Type', 'User-Agent', 'If-Modified-Since', 'Cache-Control', 'Range'], // Дозволяємо специфічні заголовки
     credentials: true, // Дозволяємо передачу креденцій через CORS
 };
 
@@ -39,6 +41,31 @@ const cache = new NodeCache({ stdTTL: 600, checkperiod: 120 });
 // ===== Middleware - save   in server log======
 app.use(express.json());
 
+app.set('trust proxy', 1); // щоб req.ip працював через проксі Render
+const limiter = rateLimit({
+  windowMs: 60_000,
+  max: 120, // 120 req/хв на IP
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.use(limiter);
+app.use((req, res, next) => {
+  const xff = req.headers['x-forwarded-for'];
+  const ip = typeof xff === 'string' ? xff.split(',')[0].trim() : req.ip;
+
+  console.log(JSON.stringify({
+    t: new Date().toISOString(),
+    ip,
+    method: req.method,
+    url: req.originalUrl,
+    host: req.headers.host,
+    origin: req.headers.origin,
+    referer: req.headers.referer,
+    ua: req.headers['user-agent'],
+  }));
+  next();
+});
 // app.use(async(req, res, next)=> {
 //     // console.log("req.method=====>", req.method);
 //     const origin = req.get('Origin')|| req.get('Referer') || 'unknown-origin';
@@ -50,6 +77,8 @@ app.use(express.json());
 //     await fs.appendFile("server.log", logEntry);
 //   next()
 // })
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 // ===========  montana
 app.get('/montana', async (req, res) => {
     const apiKey = 'Nzk4MDdmODYtNWFhZS00YWU0LTg1MWQtYTM4ODlhNTk0OTVm';
@@ -293,12 +322,12 @@ app.get("/illinois", async (req, res) => {
     });
 // ============ oklahoma ==================
    app.get("/oklahoma/:id",getOklahomaCameras)
-   
+
     // https://api-cameras.onrender.com/illinois?id=1487
     // http://localhost:3000/arkansas?id=314
 
     // http://localhost:3000/oklahoma/3
-
+  // https://api-cameras.onrender.com/oklahoma/3
     // https://api-cameras.onrender.com/illinois?id=1639
     // https://api-cameras.onrender.com/pennsylvania?id=3942--10&stream=https://pa-se3.arcadis-ivds.com:8200/chan-3942/index.m3u8
     app.listen(3000)
