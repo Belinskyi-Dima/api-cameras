@@ -23,6 +23,8 @@ const {getIllinoisData, fetchData, getIllinoisFromIllinoisDbJson} = require("./g
 const illinosi_db = require("./getIllinoisData/illinosi_db.json");
 const getStrimPannsylvania = require("./getStrimPannsylvania");
 const {getOklahomaCameras} = require("./oklahoma/index_semphore");
+const {getFlorida, proxyFloridaHlsFile} = require("./florida/index_semphore");
+const {getPenssylvania, } = require("./penssyilvania/index_semphore");
 
 
 const corsOptions = {
@@ -322,12 +324,22 @@ app.get("/illinois", async (req, res) => {
     });
 // ============ oklahoma ==================
    app.get("/oklahoma/:id",getOklahomaCameras)
+// ========== florida 
+  app.get('/cameras/api/v1/florida/:id', getFlorida); 
+  // app.get('/api/v1/florida/:id/:fileName', proxyFloridaHlsFile);
+// ============ pensailvania
+  app.get('/cameras/api/v1/penssylvania/:id', getPenssylvania); 
+  // app.get('/api/v1/penssylvania/:id/:fileName', proxyPenssylvaniaHlsFile);
 
     // https://api-cameras.onrender.com/illinois?id=1487
     // http://localhost:3000/arkansas?id=314
 
     // http://localhost:3000/oklahoma/3
-  // https://api-cameras.onrender.com/oklahoma/3
+    // https://api-cameras.onrender.com/oklahoma/3
     // https://api-cameras.onrender.com/illinois?id=1639
     // https://api-cameras.onrender.com/pennsylvania?id=3942--10&stream=https://pa-se3.arcadis-ivds.com:8200/chan-3942/index.m3u8
+    
+      // http://127.0.0.1:3000/cameras/api/v1/penssylvania/5437?originUrl=https://pa-se1.arcadis-ivds.com:8200/chan-3287/
+      // https://cameras.trucker-guide.com/cameras/api/v1/florida/31?originUrl=https://dis-se6.divas.cloud:8200/chan-60_h/
+
     app.listen(3000)
