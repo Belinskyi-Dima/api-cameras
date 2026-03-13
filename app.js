@@ -25,7 +25,7 @@ const getStrimPannsylvania = require("./getStrimPannsylvania");
 const {getOklahomaCameras} = require("./oklahoma/index_semphore");
 const {getFlorida, proxyFloridaHlsFile} = require("./florida/index_semphore");
 const {getPenssylvania, } = require("./penssyilvania/index_semphore");
-
+const {getPenssylvaniaClousers} = require("./penssylvaniaClousers")
 
 const corsOptions = {
     origin: '*', // Дозволяємо доступ з будь-якого джерела
@@ -329,6 +329,8 @@ app.get("/illinois", async (req, res) => {
   // app.get('/api/v1/florida/:id/:fileName', proxyFloridaHlsFile);
 // ============ pensailvania
   app.get('/cameras/api/v1/penssylvania/:id', getPenssylvania); 
+  app.get('/closures/api/v1/penssylvania', getPenssylvaniaClousers); 
+
   // app.get('/api/v1/penssylvania/:id/:fileName', proxyPenssylvaniaHlsFile);
 
     // https://api-cameras.onrender.com/illinois?id=1487
