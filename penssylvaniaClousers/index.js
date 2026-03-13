@@ -1,5 +1,5 @@
-const API_KEY_LOG = process.env.API_KEY_PA_LOG;
-const API_KEY_PASS = process.env.API_KEY_PA_PASS;
+const API_KEY_LOG = 'pdsvcevntdftg01';
+const API_KEY_PASS = 'N7jskd3Lqq2p';
 const state = "PA";
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
