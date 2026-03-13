@@ -332,7 +332,7 @@ app.get("/illinois", async (req, res) => {
   app.get('/closures/api/v1/penssylvania', getPenssylvaniaClousers); 
 
   // app.get('/api/v1/penssylvania/:id/:fileName', proxyPenssylvaniaHlsFile);
-
+// https://api-cameras.onrender.com/closures/api/v1/penssylvania
     // https://api-cameras.onrender.com/illinois?id=1487
     // http://localhost:3000/arkansas?id=314
 
@@ -345,3 +345,6 @@ app.get("/illinois", async (req, res) => {
       // https://cameras.trucker-guide.com/cameras/api/v1/florida/31?originUrl=https://dis-se6.divas.cloud:8200/chan-60_h/
 
     app.listen(3000)
+// https://api-cameras.onrender.com/closures/api/v1/penssylvania
+// curl -X GET "https://api-cameras.onrender.com/closures/api/v1/penssylvania" \
+//   -H "x-proxy-token: N7jskd3Lqq2p"

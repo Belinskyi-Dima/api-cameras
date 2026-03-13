@@ -1,4 +1,5 @@
-
+const API_KEY_LOG = process.env.API_KEY_PA_LOG;
+const API_KEY_PASS = process.env.API_KEY_PA_PASS;
 const state = "PA";
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -20,8 +21,7 @@ async function fetchWithTimeout(url, options = {}, timeoutMs = 45000) {
 }
 
 async function getPenssylvaniaClousers(req, res) {
-  const API_KEY_LOG = "pdsvcevntdftg01";
-  const API_KEY_PASS = req.headers["x-proxy-token"]; // тимчасово для тесту
+
 
   try {
     if (!API_KEY_LOG || !API_KEY_PASS) {
