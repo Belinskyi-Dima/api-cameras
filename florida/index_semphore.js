@@ -304,44 +304,110 @@ async function fetchPaXflowAuto({ id, originUrl }) {
 // }
 
 // ---------------- Rewrite playlist ----------------
+// old  not work
+// function rewritePlaylist({ playlistText, id, originUrl, secureTokenUri }) {
+//   const lines = String(playlistText).split('\n');
+//   const base = new URL(originUrl);
+//   const st = (secureTokenUri || '').trim(); // "?token=..."
+
+//   return lines
+//     .map((line) => {
+//       const trimmed = line.trim();
+//       if (!trimmed || trimmed.startsWith('#')) return line;
+
+//       const u = new URL(trimmed, originUrl); // абсолютний
+
+//       // A) direct segments
+//     //   console.log("PA_DIRECT_SEGMENTS:", PA_DIRECT_SEGMENTS);
+      
+//       if (PA_DIRECT_SEGMENTS) {
+//         if (st && !u.search.includes('token=')) {
+//           const qs = st.replace(/^\?/, '');
+//           const out = u.toString();
+//           return out + (out.includes('?') ? '&' : '?') + qs;
+//         }
+//         return u.toString();
+//       }
+
+//       // B) proxy segments через /seg/
+//       let relPath = u.pathname;
+//       if (relPath.startsWith(base.pathname)) relPath = relPath.slice(base.pathname.length);
+//       relPath = relPath.replace(/^\/+/, '');
+
+//       const prefix = `/cameras/api/v1/florida/${id}/`;
+//       let out = `${prefix}${encodeURIComponent(relPath)}?originUrl=${encodeURIComponent(originUrl)}`;
+
+//       // якщо сегмент уже має ?token=... — передаємо як sq
+//       if (u.search) out += `&sq=${encodeURIComponent(u.search)}`;
+//       // інакше — передаємо st
+//       else if (st) out += `&st=${encodeURIComponent(st)}`;
+
+//       return out;
+//     })
+//     .join('\n');
+// }
 function rewritePlaylist({ playlistText, id, originUrl, secureTokenUri }) {
   const lines = String(playlistText).split('\n');
   const base = new URL(originUrl);
   const st = (secureTokenUri || '').trim(); // "?token=..."
 
+  function withToken(url) {
+    if (!st || url.includes('token=')) return url;
+
+    const qs = st.replace(/^\?/, '');
+    return url + (url.includes('?') ? '&' : '?') + qs;
+  }
+
+  function toProxyUrl(uri) {
+    const u = new URL(uri, originUrl);
+
+    let relPath = u.pathname;
+    if (relPath.startsWith(base.pathname)) {
+      relPath = relPath.slice(base.pathname.length);
+    }
+
+    relPath = relPath.replace(/^\/+/, '');
+
+    const prefix = `/cameras/api/v1/florida/${id}/`;
+
+    let out =
+      `${prefix}${encodeURIComponent(relPath)}` +
+      `?originUrl=${encodeURIComponent(originUrl)}`;
+
+    if (u.search) out += `&sq=${encodeURIComponent(u.search)}`;
+    else if (st) out += `&st=${encodeURIComponent(st)}`;
+
+    return out;
+  }
+
+  function rewriteUri(uri) {
+    const absUrl = new URL(uri, originUrl).toString();
+
+    if (PA_DIRECT_SEGMENTS) {
+      return withToken(absUrl);
+    }
+
+    return toProxyUrl(uri);
+  }
+
   return lines
     .map((line) => {
       const trimmed = line.trim();
-      if (!trimmed || trimmed.startsWith('#')) return line;
 
-      const u = new URL(trimmed, originUrl); // абсолютний
+      if (!trimmed) return line;
 
-      // A) direct segments
-    //   console.log("PA_DIRECT_SEGMENTS:", PA_DIRECT_SEGMENTS);
-      
-      if (PA_DIRECT_SEGMENTS) {
-        if (st && !u.search.includes('token=')) {
-          const qs = st.replace(/^\?/, '');
-          const out = u.toString();
-          return out + (out.includes('?') ? '&' : '?') + qs;
-        }
-        return u.toString();
+      // ВАЖЛИВО: переписуємо init.mp4
+      if (trimmed.startsWith('#EXT-X-MAP:')) {
+        return line.replace(/URI="([^"]+)"/, (_, uri) => {
+          return `URI="${rewriteUri(uri)}"`;
+        });
       }
 
-      // B) proxy segments через /seg/
-      let relPath = u.pathname;
-      if (relPath.startsWith(base.pathname)) relPath = relPath.slice(base.pathname.length);
-      relPath = relPath.replace(/^\/+/, '');
+      // Інші HLS metadata не чіпаємо
+      if (trimmed.startsWith('#')) return line;
 
-      const prefix = `/cameras/api/v1/florida/${id}/`;
-      let out = `${prefix}${encodeURIComponent(relPath)}?originUrl=${encodeURIComponent(originUrl)}`;
-
-      // якщо сегмент уже має ?token=... — передаємо як sq
-      if (u.search) out += `&sq=${encodeURIComponent(u.search)}`;
-      // інакше — передаємо st
-      else if (st) out += `&st=${encodeURIComponent(st)}`;
-
-      return out;
+      // Звичайні сегменти
+      return rewriteUri(trimmed);
     })
     .join('\n');
 }

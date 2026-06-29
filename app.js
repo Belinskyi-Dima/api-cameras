@@ -326,10 +326,10 @@ app.get("/illinois", async (req, res) => {
    app.get("/oklahoma/:id",getOklahomaCameras)
 // ========== florida 
   app.get('/cameras/api/v1/florida/:id', getFlorida); 
-  // app.get('/api/v1/florida/:id/:fileName', proxyFloridaHlsFile);
+  app.get('/api/v1/florida/:id/:fileName', proxyFloridaHlsFile);
 // ============ pensailvania
   app.get('/cameras/api/v1/penssylvania/:id', getPenssylvania); 
-  app.get('/closures/api/v1/penssylvania', getPenssylvaniaClousers); 
+  app.get('/closures/api/v1/penssylvania', getPenssylvaniaClousers); // https://api-cameras.onrender.com/cameras/api/v1/penssylvania/6047?originUrl=https://pa-se4.arcadis-ivds.com:8200/chan-4419/
 
   // app.get('/api/v1/penssylvania/:id/:fileName', proxyPenssylvaniaHlsFile);
 // https://api-cameras.onrender.com/closures/api/v1/penssylvania
