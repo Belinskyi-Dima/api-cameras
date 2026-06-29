@@ -68,7 +68,7 @@ async function withDistributedLock({
 // ---------------- Config ----------------
 const PA_META_CONC = Number(process.env.PA_META_CONC || 2); // index/xflow/token
 const PA_SEG_CONC = Number(process.env.PA_SEG_CONC || 20); // segments
-const PA_DIRECT_SEGMENTS = (process.env.PA_DIRECT_SEGMENTS ?? '1') === '1'
+const DIRECT_SEGMENTS  = (process.env.PA_DIRECT_SEGMENTS ?? '1') === '1'
 
 const metaLimit = createSemaphore(PA_META_CONC);
 const segLimit = createSemaphore(PA_SEG_CONC);
